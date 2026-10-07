@@ -12,7 +12,8 @@ WORDS_DIR = ROOT / "words"
 MEDIA_DIR = ROOT / "media"
 DIST_DIR = ROOT / "dist"
 
-MODEL_ID = 1742031101
+# v2 adds AudioText as a dedicated HyperTTS source field.
+MODEL_ID = 1742031102
 DECK_ID = 2059400110
 
 FIELDS = [
@@ -23,6 +24,7 @@ FIELDS = [
     {"name": "Gender"},
     {"name": "Nuance"},
     {"name": "Example"},
+    {"name": "AudioText"},
     {"name": "Audio"},
 ]
 
@@ -74,7 +76,7 @@ TEMPLATES = [
 
 MODEL = genanki.Model(
     MODEL_ID,
-    "LetsPolish Vocabulary v1",
+    "LetsPolish Vocabulary v2",
     fields=FIELDS,
     templates=TEMPLATES,
     css=CSS,
@@ -93,6 +95,12 @@ def normalize_entry(raw: dict, source_body: str = "") -> dict:
     if not word or not translation:
         raise ValueError(f"Every entry needs word + translation: {raw!r}")
 
+    # AudioText is intentionally plain Polish text. HyperTTS uses it as the
+    # source and writes generated [sound:...] markup into Audio inside Anki.
+    audio_text = str(raw.get("audio_text", word) or word).strip()
+
+    # Optional pre-generated audio remains supported. This lets us mix
+    # HyperTTS-generated audio with hand-curated recordings later.
     audio_name = str(raw.get("audio", "") or "").strip()
     audio_field = f"[sound:{audio_name}]" if audio_name else ""
 
@@ -115,6 +123,7 @@ def normalize_entry(raw: dict, source_body: str = "") -> dict:
         "gender": str(raw.get("gender", "") or ""),
         "nuance": md_to_html(nuance),
         "example": md_to_html(example),
+        "audio_text": audio_text,
         "audio": audio_field,
         "audio_name": audio_name,
         "tags": [str(tag) for tag in tags],
@@ -148,6 +157,7 @@ def main() -> None:
                 entry["gender"],
                 entry["nuance"],
                 entry["example"],
+                entry["audio_text"],
                 entry["audio"],
             ],
             tags=entry["tags"],
