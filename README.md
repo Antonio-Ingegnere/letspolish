@@ -12,6 +12,43 @@ One lexical note generates five training cards:
 
 The build script generates an `.apkg` deck from Markdown files in `words/`.
 
+## Vocabulary organization
+
+Vocabulary is canonical and grouped semantically, not by textbook page or worksheet.
+
+Current layout:
+
+```text
+words/
+├── verbs.md
+├── nouns.md
+├── adjectives.md
+├── adverbs-function.md
+├── numerals.md
+├── pronouns.md
+└── expressions.md
+```
+
+Rules:
+
+- one Polish word/form has one canonical lexical entry;
+- do not duplicate a word just because it appears in another lesson;
+- `tags` describe level, part of speech, pronunciation drills and learning themes;
+- `sources` records every worksheet/lesson where the word occurred;
+- the builder rejects duplicate canonical words across files;
+- nested folders are supported if we need more structure later.
+
+Example:
+
+```yaml
+- word: cześć
+  translation: привет; пока; честь
+  ipa: /t͡ʂɛɕt͡ɕ/
+  pos: expression
+  tags: [a1, expression, greeting, farewell, pronunciation]
+  sources: [alphabet_p8, t1_1b]
+```
+
 ## Quick start
 
 ```bash
@@ -27,30 +64,9 @@ Output:
 dist/letspolish.apkg
 ```
 
-## Source formats
+## Entry format
 
-### Single-word Markdown file
-
-```md
----
-word: książka
-translation: книга
-ipa: /ˈkɕɔ̃ʂka/
-pos: noun
-gender: f
-tags: [a1, vocabulary]
-audio_text: książka
-audio: ""
-nuance: Обычное слово «книга».
-example: To jest dobra książka. — Это хорошая книга.
----
-```
-
-`audio_text` is optional; when omitted it defaults to `word`.
-
-### Batch Markdown file
-
-For lesson-sized batches, one Markdown file may contain many lexical entries in YAML front matter:
+A semantic file contains an `entries` list in YAML front matter:
 
 ```md
 ---
@@ -60,17 +76,16 @@ entries:
     ipa: /ˈkɕɔ̃ʂka/
     pos: noun
     gender: f
-    tags: [a1, vocabulary]
-  - word: dziecko
-    translation: ребёнок
-    ipa: /ˈd͡ʑɛt͡skɔ/
-    pos: noun
-    gender: n
-    tags: [a1, vocabulary]
+    tags: [a1, noun]
+    sources: [alphabet_p8]
+    audio_text: książka
+    audio: ""
+    nuance: Обычное слово «книга».
+    example: To jest dobra książka. — Это хорошая книга.
 ---
 ```
 
-This is the format currently used by `words/a1-current.md`.
+`audio_text` is optional; when omitted it defaults to `word`.
 
 ## Audio via HyperTTS
 
@@ -88,7 +103,7 @@ Recommended workflow:
    - source field: `AudioText`
    - target field: `Audio`
    - language: Polish (`pl-PL`)
-   - voice/service: your preferred Polish provider (Google/Google Translate if available in your setup)
+   - voice/service: your preferred Polish provider
 5. Sync Anki to copy generated media to mobile clients.
 
 The two listening cards are conditional on `Audio`, so they become active once HyperTTS fills that field.
