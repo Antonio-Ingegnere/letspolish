@@ -10,7 +10,7 @@ One lexical note generates five training cards:
 4. Polish audio → type Polish (dictation)
 5. Polish audio → type Russian (listening comprehension)
 
-Each word lives in `words/*.md`. The build script generates an `.apkg` deck.
+The build script generates an `.apkg` deck from Markdown files in `words/`.
 
 ## Quick start
 
@@ -27,7 +27,9 @@ Output:
 dist/letspolish.apkg
 ```
 
-## Word format
+## Source formats
+
+### Single-word Markdown file
 
 ```md
 ---
@@ -38,13 +40,56 @@ pos: noun
 gender: f
 tags: [a1, vocabulary]
 audio: ""
+nuance: Обычное слово «книга».
+example: To jest dobra książka. — Это хорошая книга.
 ---
-
-## Nuance
-Обычное слово «книга».
-
-## Example
-To jest dobra książka. — Это хорошая книга.
 ```
 
-If `audio` contains a filename such as `ksiazka.mp3`, the corresponding file must exist under `media/`. Audio cards are skipped when no audio is available.
+### Batch Markdown file
+
+For lesson-sized batches, one Markdown file may contain many lexical entries in YAML front matter:
+
+```md
+---
+entries:
+  - word: książka
+    translation: книга
+    ipa: /ˈkɕɔ̃ʂka/
+    pos: noun
+    gender: f
+    tags: [a1, vocabulary]
+  - word: dziecko
+    translation: ребёнок
+    ipa: /ˈd͡ʑɛt͡skɔ/
+    pos: noun
+    gender: n
+    tags: [a1, vocabulary]
+---
+```
+
+This is the format currently used by `words/a1-current.md`.
+
+## Audio
+
+Put pronunciation files into `media/` and reference them by filename:
+
+```yaml
+audio: ksiazka.mp3
+```
+
+When `audio` is empty, the two listening cards are not generated for that lexical note.
+
+## Anki fields
+
+Each lexical entry produces these fields:
+
+- Word
+- Translation
+- IPA
+- POS
+- Gender
+- Nuance
+- Example
+- Audio
+
+The note model then derives all five training directions automatically.
