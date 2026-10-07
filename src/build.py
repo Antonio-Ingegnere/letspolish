@@ -89,25 +89,18 @@ def md_to_html(text: str | None) -> str:
     return markdown.markdown(str(text), extensions=["extra", "sane_lists"])
 
 
-def normalize_entry(raw: dict, source_body: str = "") -> dict:
+def normalize_entry(raw: dict, source_body: str = "", source_file: str = "") -> dict:
     word = str(raw.get("word", "")).strip()
     translation = str(raw.get("translation", "")).strip()
     if not word or not translation:
-        raise ValueError(f"Every entry needs word + translation: {raw!r}")
+        raise ValueError(f"Every entry needs word + translation ({source_file}): {raw!r}")
 
-    # AudioText is intentionally plain Polish text. HyperTTS uses it as the
-    # source and writes generated [sound:...] markup into Audio inside Anki.
     audio_text = str(raw.get("audio_text", word) or word).strip()
-
-    # Optional pre-generated audio remains supported. This lets us mix
-    # HyperTTS-generated audio with hand-curated recordings later.
     audio_name = str(raw.get("audio", "") or "").strip()
     audio_field = f"[sound:{audio_name}]" if audio_name else ""
 
     nuance = raw.get("nuance", "")
     example = raw.get("example", "")
-
-    # Single-entry files may keep richer prose in the Markdown body.
     if source_body.strip() and not nuance and not example:
         nuance = source_body.strip()
 
@@ -127,17 +120,34 @@ def normalize_entry(raw: dict, source_body: str = "") -> dict:
         "audio": audio_field,
         "audio_name": audio_name,
         "tags": [str(tag) for tag in tags],
+        "sources": raw.get("sources", []) or [],
+        "source_file": source_file,
     }
 
 
 def load_entries() -> Iterable[dict]:
-    for path in sorted(WORDS_DIR.glob("*.md")):
+    seen: dict[str, str] = {}
+
+    for path in sorted(WORDS_DIR.rglob("*.md")):
         post = frontmatter.load(path)
-        if "entries" in post.metadata:
-            for raw in post.metadata["entries"] or []:
-                yield normalize_entry(dict(raw))
-        else:
-            yield normalize_entry(dict(post.metadata), post.content)
+        raw_entries = post.metadata.get("entries")
+        if raw_entries is None:
+            raw_entries = [post.metadata]
+
+        for raw in raw_entries or []:
+            entry = normalize_entry(
+                dict(raw),
+                post.content if "entries" not in post.metadata else "",
+                str(path.relative_to(ROOT)),
+            )
+            key = entry["word"].casefold()
+            if key in seen:
+                raise ValueError(
+                    f"Duplicate canonical word {entry['word']!r}: "
+                    f"{seen[key]} and {entry['source_file']}"
+                )
+            seen[key] = entry["source_file"]
+            yield entry
 
 
 def main() -> None:
