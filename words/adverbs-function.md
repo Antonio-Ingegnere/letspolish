@@ -70,6 +70,22 @@ entries:
     sources: [user_vocabulary]
     nuance: "Вопросительное наречие «откуда?». Часто встречается в вопросе Skąd jesteś? — Откуда ты?"
     example: "Skąd jesteś? — Откуда ты?"
+  - word: tutaj
+    translation: здесь; тут
+    ipa: "/ˈtutaj/"
+    pos: adverb
+    tags: [a1, adverb, place, function_word]
+    sources: [user_vocabulary]
+    nuance: "Указывает на место рядом с говорящим: «здесь, тут». В разговорной речи часто сокращается до tu."
+    example: "Jestem tutaj. — Я здесь."
+  - word: tam
+    translation: там
+    ipa: "/tam/"
+    pos: adverb
+    tags: [a1, adverb, place, function_word]
+    sources: [user_vocabulary]
+    nuance: "Указывает на место вдали от говорящего или уже упомянутое место: «там»."
+    example: "On jest tam. — Он там."
   - word: prościej
     translation: проще; более просто
     ipa: "/ˈprɔɕt͡ɕɛj/"
