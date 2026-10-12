@@ -54,6 +54,22 @@ entries:
     sources: [topic_questions]
     nuance: "В начале общего вопроса обычно отдельно не переводится: Czy jesteś gotowy? — Ты готов? Между двумя вариантами означает «или»: Kawa czy herbata? — Кофе или чай? В разговорной речи вопросительное czy часто можно опустить и оставить только вопросительную интонацию."
     example: "Czy masz czas? — У тебя есть время?; Kawa czy herbata? — Кофе или чай?"
+  - word: przez
+    translation: через; сквозь; из-за; в течение
+    ipa: "/pʂɛs/"
+    pos: preposition
+    tags: [a1, preposition, function_word]
+    sources: [user_vocabulary]
+    nuance: "Многозначный предлог с винительным падежом. Может означать движение через/сквозь что-то, причину «из-за», а также длительность «в течение»."
+    example: "Idę przez park. — Я иду через парк.; Przez godzinę. — В течение часа."
+  - word: skąd
+    translation: откуда
+    ipa: "/skɔnt/"
+    pos: adverb
+    tags: [a1, adverb, function_word, questions]
+    sources: [user_vocabulary]
+    nuance: "Вопросительное наречие «откуда?». Часто встречается в вопросе Skąd jesteś? — Откуда ты?"
+    example: "Skąd jesteś? — Откуда ты?"
   - word: prościej
     translation: проще; более просто
     ipa: "/ˈprɔɕt͡ɕɛj/"
