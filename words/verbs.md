@@ -4,9 +4,65 @@ entries:
     translation: быть
     ipa: "/bɨt͡ɕ/"
     pos: verb
-    tags: [a1, core, verb]
-    sources: [alphabet_p8]
-    nuance: "Базовый глагол «быть»."
+    tags: [a1, core, verb, byc]
+    sources: [alphabet_p8, topic_byc_present]
+    nuance: "Базовый неправильный глагол «быть». Настоящее время: jestem, jesteś, jest, jesteśmy, jesteście, są."
+    example: "Jestem w domu. — Я дома."
+
+  - word: jestem
+    translation: я есть; я являюсь; я нахожусь
+    ipa: "/ˈjɛstɛm/"
+    pos: verb_form
+    tags: [a1, core, verb, byc, present, first_person, singular]
+    sources: [topic_byc_present]
+    nuance: "1-е лицо ед. числа глагола być. Местоимение ja обычно можно опустить."
+    example: "Jestem zmęczony. — Я устал."
+
+  - word: jesteś
+    translation: ты есть; ты являешься; ты находишься
+    ipa: "/ˈjɛstɛɕ/"
+    pos: verb_form
+    tags: [a1, core, verb, byc, present, second_person, singular]
+    sources: [topic_byc_present]
+    nuance: "2-е лицо ед. числа глагола być."
+    example: "Jesteś gotowy? — Ты готов?"
+
+  - word: jest
+    translation: он есть; она есть; оно есть; находится
+    ipa: "/jɛst/"
+    pos: verb_form
+    tags: [a1, core, verb, byc, present, third_person, singular]
+    sources: [topic_byc_present]
+    nuance: "3-е лицо ед. числа глагола być: on/ona/ono jest."
+    example: "Ona jest w domu. — Она дома."
+
+  - word: jesteśmy
+    translation: мы есть; мы являемся; мы находимся
+    ipa: "/jɛˈstɛɕmɨ/"
+    pos: verb_form
+    tags: [a1, core, verb, byc, present, first_person, plural]
+    sources: [topic_byc_present]
+    nuance: "1-е лицо мн. числа глагола być."
+    example: "Jesteśmy z Polski. — Мы из Польши."
+
+  - word: jesteście
+    translation: вы есть; вы являетесь; вы находитесь
+    ipa: "/jɛˈstɛɕt͡ɕɛ/"
+    pos: verb_form
+    tags: [a1, core, verb, byc, present, second_person, plural]
+    sources: [topic_byc_present]
+    nuance: "2-е лицо мн. числа глагола być."
+    example: "Jesteście gotowi? — Вы готовы?"
+
+  - word: są
+    translation: они есть; они являются; они находятся
+    ipa: "/sɔ̃/"
+    pos: verb_form
+    tags: [a1, core, verb, byc, present, third_person, plural, nasal_vowel]
+    sources: [topic_byc_present]
+    nuance: "3-е лицо мн. числа глагола być: oni/one są. В конце ą сохраняет носовость."
+    example: "Oni są tutaj. — Они здесь."
+
   - word: drżeć
     translation: дрожать
     ipa: "/dʐɛt͡ɕ/"
