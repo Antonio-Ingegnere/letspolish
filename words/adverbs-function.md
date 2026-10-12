@@ -46,6 +46,14 @@ entries:
     tags: [a1, preposition, function_word]
     sources: [alphabet_p8]
     nuance: "Вариант z, используемый перед некоторыми сочетаниями согласных."
+  - word: czy
+    translation: вопросительная частица; или
+    ipa: "/t͡ʂɨ/"
+    pos: particle_conjunction
+    tags: [a1, particle, conjunction, function_word, questions]
+    sources: [topic_questions]
+    nuance: "В начале общего вопроса обычно отдельно не переводится: Czy jesteś gotowy? — Ты готов? Между двумя вариантами означает «или»: Kawa czy herbata? — Кофе или чай? В разговорной речи вопросительное czy часто можно опустить и оставить только вопросительную интонацию."
+    example: "Czy masz czas? — У тебя есть время?; Kawa czy herbata? — Кофе или чай?"
   - word: prościej
     translation: проще; более просто
     ipa: "/ˈprɔɕt͡ɕɛj/"
