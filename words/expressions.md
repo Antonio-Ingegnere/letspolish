@@ -189,18 +189,22 @@ entries:
     sources: [topic_how_are_you]
 
   - word: Po staremu.
-    translation: Всё по-старому.
+    translation: Всё по-старому.; Без изменений.
     ipa: "/pɔ staˈrɛmu/"
     pos: expression
     tags: [a1, expression, answer, how_are_you]
     sources: [topic_how_are_you]
+    nuance: "Разговорный ответ: ничего существенно не изменилось, всё как раньше. Обычно нейтральный; может звучать слегка устало или иронично по интонации."
+    example: "Co słychać? — Po staremu. Praca, dom, praca. — Как дела? — Всё по-старому. Работа, дом, работа."
 
   - word: Nic nowego.
-    translation: Ничего нового.
+    translation: Ничего нового.; Ничего нового не происходит.
     ipa: "/ɲit͡s nɔˈvɛɡɔ/"
     pos: expression
     tags: [a1, expression, answer, how_are_you]
     sources: [topic_how_are_you]
+    nuance: "Буквально «ничего нового». Естественный ответ на Co słychać?; говорит именно об отсутствии новостей/изменений, а не обязательно о том, хорошо тебе или плохо."
+    example: "Co słychać? — Nic nowego. A u ciebie? — Что нового? — Ничего нового. А у тебя?"
 
   - word: Nie mogę narzekać.
     translation: Не могу жаловаться.
