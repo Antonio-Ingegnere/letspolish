@@ -14,6 +14,8 @@ DIST_DIR = ROOT / "dist"
 
 # v2 adds AudioText as a dedicated HyperTTS source field.
 MODEL_ID = 1742031102
+# Separate model for typed present-tense conjugation drills.
+CONJUGATION_MODEL_ID = 1742031103
 DECK_ID = 2059400110
 
 FIELDS = [
@@ -82,6 +84,47 @@ MODEL = genanki.Model(
     css=CSS,
 )
 
+CONJUGATION_FIELDS = [
+    {"name": "Infinitive"},
+    {"name": "Translation"},
+    {"name": "Person"},
+    {"name": "Form"},
+]
+
+CONJUGATION_TEMPLATES = [
+    {
+        "name": "Present tense → type form",
+        "qfmt": (
+            '<div class="meta">Настоящее время · {{Person}}</div>'
+            '<div class="word">{{Infinitive}}</div>'
+            '<div class="translation">{{Translation}}</div>'
+            '{{type:Form}}'
+        ),
+        "afmt": (
+            '{{FrontSide}}<hr>'
+            '<div class="word">{{Form}}</div>'
+            '<div class="meta">{{Person}} · {{Infinitive}}</div>'
+        ),
+    },
+]
+
+CONJUGATION_MODEL = genanki.Model(
+    CONJUGATION_MODEL_ID,
+    "LetsPolish Present Conjugation v1",
+    fields=CONJUGATION_FIELDS,
+    templates=CONJUGATION_TEMPLATES,
+    css=CSS,
+)
+
+PRESENT_PERSONS = [
+    ("ja", "ja"),
+    ("ty", "ty"),
+    ("on_ona_ono", "on / ona / ono"),
+    ("my", "my"),
+    ("wy", "wy"),
+    ("oni_one", "oni / one"),
+]
+
 
 def md_to_html(text: str | None) -> str:
     if not text:
@@ -108,6 +151,10 @@ def normalize_entry(raw: dict, source_body: str = "", source_file: str = "") -> 
     if isinstance(tags, str):
         tags = [tags]
 
+    present = raw.get("present", {}) or {}
+    if present and not isinstance(present, dict):
+        raise ValueError(f"present must be a mapping ({source_file}, {word!r})")
+
     return {
         "word": word,
         "translation": translation,
@@ -121,6 +168,7 @@ def normalize_entry(raw: dict, source_body: str = "", source_file: str = "") -> 
         "audio_name": audio_name,
         "tags": [str(tag) for tag in tags],
         "sources": raw.get("sources", []) or [],
+        "present": {str(k): str(v).strip() for k, v in present.items()},
         "source_file": source_file,
     }
 
@@ -150,12 +198,33 @@ def load_entries() -> Iterable[dict]:
             yield entry
 
 
+def validate_present(entry: dict) -> None:
+    present = entry["present"]
+    if not present:
+        return
+
+    expected = {key for key, _ in PRESENT_PERSONS}
+    actual = set(present)
+    if actual != expected:
+        missing = sorted(expected - actual)
+        extra = sorted(actual - expected)
+        raise ValueError(
+            f"Invalid present conjugation for {entry['word']!r}: "
+            f"missing={missing}, extra={extra}"
+        )
+
+    empty = [key for key, _ in PRESENT_PERSONS if not present[key]]
+    if empty:
+        raise ValueError(f"Empty present forms for {entry['word']!r}: {empty}")
+
+
 def main() -> None:
     DIST_DIR.mkdir(parents=True, exist_ok=True)
     deck = genanki.Deck(DECK_ID, "Let's Polish::A1 Vocabulary")
     media_files: list[str] = []
 
-    count = 0
+    lexical_count = 0
+    conjugation_count = 0
     for entry in load_entries():
         note = genanki.Note(
             model=MODEL,
@@ -174,7 +243,27 @@ def main() -> None:
             guid=genanki.guid_for("pl-ru", entry["word"], entry["translation"]),
         )
         deck.add_note(note)
-        count += 1
+        lexical_count += 1
+
+        validate_present(entry)
+        if entry["present"]:
+            for person_key, person_label in PRESENT_PERSONS:
+                form = entry["present"][person_key]
+                conjugation_note = genanki.Note(
+                    model=CONJUGATION_MODEL,
+                    fields=[
+                        entry["word"],
+                        entry["translation"],
+                        person_label,
+                        form,
+                    ],
+                    tags=entry["tags"] + ["grammar", "present_conjugation"],
+                    guid=genanki.guid_for(
+                        "pl-present-conjugation", entry["word"], person_key
+                    ),
+                )
+                deck.add_note(conjugation_note)
+                conjugation_count += 1
 
         if entry["audio_name"]:
             media_path = MEDIA_DIR / entry["audio_name"]
@@ -186,7 +275,10 @@ def main() -> None:
     package = genanki.Package(deck)
     package.media_files = media_files
     package.write_to_file(output)
-    print(f"Built {count} lexical notes → {output}")
+    print(
+        f"Built {lexical_count} lexical notes + "
+        f"{conjugation_count} conjugation cards → {output}"
+    )
 
 
 if __name__ == "__main__":
