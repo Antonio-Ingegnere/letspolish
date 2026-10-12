@@ -2,7 +2,7 @@
 
 Markdown-first Polish vocabulary trainer for Anki.
 
-One lexical note generates five training cards:
+One lexical note generates five vocabulary training cards:
 
 1. Polish → Russian (recognition)
 2. Polish → type Russian
@@ -10,13 +10,15 @@ One lexical note generates five training cards:
 4. Polish audio → type Polish (dictation)
 5. Polish audio → type Russian (listening comprehension)
 
+Verb entries can also contain a `present` conjugation map. For such a verb the builder automatically adds six typed present-tense drills: `ja`, `ty`, `on/ona/ono`, `my`, `wy`, `oni/one`.
+
 The build script generates an `.apkg` deck from Markdown files in `words/`.
 
 ## Vocabulary organization
 
 Vocabulary is canonical and grouped semantically, not by textbook page or worksheet.
 
-Current layout:
+Current layout includes files such as:
 
 ```text
 words/
@@ -26,7 +28,9 @@ words/
 ├── adverbs-function.md
 ├── numerals.md
 ├── pronouns.md
-└── expressions.md
+├── expressions.md
+├── forms-of-address.md
+└── geography.md
 ```
 
 Rules:
@@ -87,9 +91,37 @@ entries:
 
 `audio_text` is optional; when omitted it defaults to `word`.
 
+## Present-tense conjugation training
+
+For verbs that should produce conjugation drills, add a complete `present` map:
+
+```yaml
+- word: mieszkać
+  translation: жить; проживать
+  ipa: /ˈmjɛʂkat͡ɕ/
+  pos: verb
+  tags: [a1, verb, conjugation_m_sz, present]
+  present:
+    ja: mieszkam
+    ty: mieszkasz
+    on_ona_ono: mieszka
+    my: mieszkamy
+    wy: mieszkacie
+    oni_one: mieszkają
+```
+
+The builder validates that all six persons are present, then generates six additional typed cards such as:
+
+```text
+mieszkać · ja → [type: mieszkam]
+mieszkać · oni / one → [type: mieszkają]
+```
+
+These cards use the separate `LetsPolish Present Conjugation v1` note model and receive the `grammar` and `present_conjugation` tags, so they can be filtered independently in Anki.
+
 ## Audio via HyperTTS
 
-The generated note model contains two dedicated fields:
+The generated vocabulary note model contains two dedicated fields:
 
 - `AudioText` — Polish text that should be synthesized; defaults to `Word`
 - `Audio` — generated Anki sound markup
@@ -122,7 +154,7 @@ The builder will package that file and pre-fill `Audio` for the note.
 
 ## Anki fields
 
-Each lexical entry produces these fields:
+Each lexical entry produces these vocabulary fields:
 
 - Word
 - Translation
@@ -134,4 +166,4 @@ Each lexical entry produces these fields:
 - AudioText
 - Audio
 
-The note model then derives all five training directions automatically.
+The vocabulary note model derives all five vocabulary training directions automatically. Verb entries with `present` additionally generate the six conjugation cards described above.
