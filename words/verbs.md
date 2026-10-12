@@ -63,6 +63,86 @@ entries:
     nuance: "3-е лицо мн. числа глагола być: oni/one są. В конце ą сохраняет носовость."
     example: "Oni są tutaj. — Они здесь."
 
+  - word: mieszkać
+    translation: жить; проживать
+    ipa: "/ˈmjɛʂkat͡ɕ/"
+    pos: verb
+    tags: [a1, core, verb, conjugation_m_sz, present]
+    sources: [topic_conjugation_m_sz]
+    nuance: "Глагол типа -m, -sz. Настоящее время: mieszkam, mieszkasz, mieszka, mieszkamy, mieszkacie, mieszkają."
+    example: "Mieszkam w Gdańsku. — Я живу в Гданьске."
+    present:
+      ja: mieszkam
+      ty: mieszkasz
+      on_ona_ono: mieszka
+      my: mieszkamy
+      wy: mieszkacie
+      oni_one: mieszkają
+
+  - word: nazywać
+    translation: называть
+    ipa: "/naˈzɨvat͡ɕ/"
+    pos: verb
+    tags: [a1, core, verb, conjugation_m_sz, present]
+    sources: [topic_conjugation_m_sz]
+    nuance: "Глагол типа -m, -sz. Очень часто употребляется как nazywać się — называться, зваться."
+    example: "Jak się nazywasz? — Как тебя зовут?"
+    present:
+      ja: nazywam
+      ty: nazywasz
+      on_ona_ono: nazywa
+      my: nazywamy
+      wy: nazywacie
+      oni_one: nazywają
+
+  - word: rozumieć
+    translation: понимать
+    ipa: "/rɔˈzumjɛt͡ɕ/"
+    pos: verb
+    tags: [a1, core, verb, conjugation_m_sz, present]
+    sources: [topic_conjugation_m_sz]
+    nuance: "Глагол типа -m, -sz: rozumiem, rozumiesz."
+    example: "Rozumiem po polsku. — Я понимаю по-польски."
+    present:
+      ja: rozumiem
+      ty: rozumiesz
+      on_ona_ono: rozumie
+      my: rozumiemy
+      wy: rozumiecie
+      oni_one: rozumieją
+
+  - word: mieć
+    translation: иметь
+    ipa: "/mjɛt͡ɕ/"
+    pos: verb
+    tags: [a1, core, verb, conjugation_m_sz, present]
+    sources: [topic_conjugation_m_sz]
+    nuance: "Относится к типу -m, -sz, но основа настоящего времени ma-: mam, masz, ma, mamy, macie, mają."
+    example: "Mam czas. — У меня есть время."
+    present:
+      ja: mam
+      ty: masz
+      on_ona_ono: ma
+      my: mamy
+      wy: macie
+      oni_one: mają
+
+  - word: grać
+    translation: играть
+    ipa: "/ɡrat͡ɕ/"
+    pos: verb
+    tags: [a1, core, verb, conjugation_m_sz, present]
+    sources: [topic_conjugation_m_sz]
+    nuance: "Глагол типа -m, -sz. С инструментом обычно grać na czymś: grać na gitarze."
+    example: "Gram w piłkę. — Я играю в мяч / футбол."
+    present:
+      ja: gram
+      ty: grasz
+      on_ona_ono: gra
+      my: gramy
+      wy: gracie
+      oni_one: grają
+
   - word: drżeć
     translation: дрожать
     ipa: "/dʐɛt͡ɕ/"
