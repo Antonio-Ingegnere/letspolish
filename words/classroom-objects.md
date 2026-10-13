@@ -186,6 +186,24 @@ entries:
     sources: [user_vocabulary]
     nuance: "Часто chusteczka higieniczna — бумажный носовой платок/салфетка для носа."
     example: "Masz chusteczkę? — У тебя есть салфетка?"
+
+  - word: nauczycielka
+    translation: учительница; преподавательница
+    ipa: "/nau̯t͡ʂɨˈt͡ɕɛlka/"
+    pos: noun
+    gender: f
+    tags: [a1, noun, classroom, people]
+    sources: [exercise_4_co_to_jest]
+    nuance: "Женская форма от nauczyciel — учитель, преподаватель."
+
+  - word: pytanie
+    translation: вопрос
+    ipa: "/pɨˈtaɲɛ/"
+    pos: noun
+    gender: n
+    tags: [a1, noun, classroom, conversation]
+    sources: [exercise_4_co_to_jest]
+    example: "Mam pytanie. — У меня есть вопрос."
 ---
 
 # Classroom and everyday objects
