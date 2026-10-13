@@ -123,6 +123,16 @@ entries:
     tags: [a1, noun, classroom, objects]
     sources: [exercise_1_co_to_jest]
 
+  - word: płyta
+    translation: диск; пластинка; плита
+    ipa: "/ˈpwɨta/"
+    pos: noun
+    gender: f
+    tags: [a1, noun, objects]
+    sources: [user_vocabulary]
+    nuance: "Многозначное слово: płyta CD — компакт-диск, płyta winylowa — виниловая пластинка, płyta также может означать плиту/панель."
+    example: "To jest płyta CD. — Это компакт-диск."
+
   - word: długopis
     translation: ручка; шариковая ручка
     ipa: "/dwuˈɡɔpis/"
