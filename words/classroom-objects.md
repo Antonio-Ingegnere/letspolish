@@ -156,6 +156,26 @@ entries:
     tags: [a1, noun, objects]
     sources: [exercise_1_co_to_jest]
     nuance: "Разговорное слово для мобильного телефона; также имеет другие значения, например «клетка» в биологии."
+
+  - word: serwetka
+    translation: салфетка; столовая салфетка
+    ipa: "/sɛrˈvɛtka/"
+    pos: noun
+    gender: f
+    tags: [a1, noun, everyday, objects]
+    sources: [user_vocabulary]
+    nuance: "Обычно салфетка за столом, бумажная или тканевая."
+    example: "Poproszę serwetkę. — Дайте, пожалуйста, салфетку."
+
+  - word: chusteczka
+    translation: носовой платок; бумажная салфетка
+    ipa: "/xuˈstɛt͡ʂka/"
+    pos: noun
+    gender: f
+    tags: [a1, noun, everyday, objects]
+    sources: [user_vocabulary]
+    nuance: "Часто chusteczka higieniczna — бумажный носовой платок/салфетка для носа."
+    example: "Masz chusteczkę? — У тебя есть салфетка?"
 ---
 
 # Classroom and everyday objects
