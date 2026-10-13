@@ -114,6 +114,48 @@ entries:
     tags: [a1, noun, objects]
     sources: [user_vocabulary]
     nuance: "Чаще небольшая сумка/сумочка; большая сумка — torba."
+
+  - word: płyta CD
+    translation: компакт-диск; CD-диск
+    ipa: "/ˈpwɨta t͡sɛ ˈdɛ/"
+    pos: noun_phrase
+    gender: f
+    tags: [a1, noun, classroom, objects]
+    sources: [exercise_1_co_to_jest]
+
+  - word: długopis
+    translation: ручка; шариковая ручка
+    ipa: "/dwuˈɡɔpis/"
+    pos: noun
+    gender: m
+    tags: [a1, noun, classroom, objects]
+    sources: [exercise_1_co_to_jest]
+
+  - word: torba
+    translation: сумка; пакет
+    ipa: "/ˈtɔrba/"
+    pos: noun
+    gender: f
+    tags: [a1, noun, objects]
+    sources: [exercise_1_co_to_jest]
+    nuance: "Общее слово для сумки/мешка; torebka обычно меньше и часто означает дамскую сумочку."
+
+  - word: segregator
+    translation: папка-регистратор; папка с кольцами
+    ipa: "/sɛɡrɛˈɡatɔr/"
+    pos: noun
+    gender: m
+    tags: [a1, noun, classroom, office, objects]
+    sources: [exercise_1_co_to_jest]
+
+  - word: komórka
+    translation: мобильный телефон; мобильник
+    ipa: "/kɔˈmurka/"
+    pos: noun
+    gender: f
+    tags: [a1, noun, objects]
+    sources: [exercise_1_co_to_jest]
+    nuance: "Разговорное слово для мобильного телефона; также имеет другие значения, например «клетка» в биологии."
 ---
 
 # Classroom and everyday objects
