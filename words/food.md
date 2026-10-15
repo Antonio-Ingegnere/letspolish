@@ -32,6 +32,24 @@ entries:
     gender: f
     tags: [a1, noun, food, sweets]
     sources: [user_vocabulary]
+
+  - word: truskawka
+    translation: клубника; ягода клубники
+    ipa: "/truˈskafka/"
+    pos: noun
+    gender: f
+    tags: [a1, noun, food, fruit]
+    sources: [recent_conversation]
+    example: "Truskawka jest czerwona. — Клубника красная."
+
+  - word: awokado
+    translation: авокадо
+    ipa: "/avɔˈkadɔ/"
+    pos: noun
+    gender: n
+    tags: [a1, noun, food, fruit]
+    sources: [recent_conversation]
+    example: "Awokado jest zielone. — Авокадо зелёное."
 ---
 
 # Food and sweets
