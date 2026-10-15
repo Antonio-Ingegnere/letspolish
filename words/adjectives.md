@@ -202,6 +202,22 @@ entries:
     tags: [a1, adjective, color]
     sources: [colors_core]
     nuance: "Формы: granatowy (m), granatowa (f), granatowe (n)."
+
+  - word: ciemnoszary
+    translation: тёмно-серый; темно-серый
+    ipa: "/t͡ɕɛmˈnɔʂarɨ/"
+    pos: adjective
+    tags: [a1, adjective, color]
+    sources: [user_vocabulary]
+    nuance: "Формы: ciemnoszary (m), ciemnoszara (f), ciemnoszare (n). Пишется слитно."
+
+  - word: jasnoniebieski
+    translation: светло-синий; голубой
+    ipa: "/jasnɔɲɛˈbjɛski/"
+    pos: adjective
+    tags: [a1, adjective, color]
+    sources: [user_vocabulary]
+    nuance: "Формы: jasnoniebieski (m), jasnoniebieska (f), jasnoniebieskie (n). Пишется слитно."
 ---
 
 # Adjectives
