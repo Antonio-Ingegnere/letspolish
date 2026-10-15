@@ -204,6 +204,16 @@ entries:
     tags: [a1, noun, classroom, conversation]
     sources: [exercise_4_co_to_jest]
     example: "Mam pytanie. — У меня есть вопрос."
+
+  - word: pendrive
+    translation: флэшка; USB-накопитель
+    ipa: "/ˈpɛndrajf/"
+    pos: noun
+    gender: m
+    tags: [a1, noun, technology, objects]
+    sources: [recent_conversation]
+    nuance: "Обычное разговорное слово для USB-накопителя. Более формально: pamięć USB."
+    example: "Mam plik na pendrivie. — У меня файл на флэшке."
 ---
 
 # Classroom and everyday objects
