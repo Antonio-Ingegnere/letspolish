@@ -300,6 +300,33 @@ entries:
     pos: noun_plural
     tags: [a1, noun, pronunciation]
     sources: [t2_1b]
+
+  - word: tydzień
+    translation: неделя
+    ipa: "/ˈtɨd͡ʑɛɲ/"
+    pos: noun
+    gender: m
+    tags: [a1, noun, time]
+    sources: [recent_conversation]
+    example: "Za tydzień. — Через неделю."
+
+  - word: mianownik
+    translation: именительный падеж
+    ipa: "/mjaˈnɔvɲik/"
+    pos: noun
+    gender: m
+    tags: [a1, noun, grammar]
+    sources: [recent_conversation]
+    nuance: "Грамматический термин; отвечает на вопросы kto? co? Связан со словом miano — имя, название."
+
+  - word: kolor
+    translation: цвет
+    ipa: "/ˈkɔlɔr/"
+    pos: noun
+    gender: m
+    tags: [a1, noun, colors]
+    sources: [recent_conversation]
+    example: "Jakiego koloru jest truskawka? — Какого цвета клубника?"
 ---
 
 # Nouns
