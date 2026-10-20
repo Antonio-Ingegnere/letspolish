@@ -218,6 +218,109 @@ entries:
     tags: [a1, adjective, color]
     sources: [user_vocabulary]
     nuance: "Формы: jasnoniebieski (m), jasnoniebieska (f), jasnoniebieskie (n). Пишется слитно."
+
+  - word: wesołe
+    translation: весёлое; весёлые
+    ipa: "/vɛˈsɔwɛ/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: smutne
+    translation: грустное; грустные
+    ipa: "/ˈsmutnɛ/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: przystojny
+    translation: красивый; привлекательный (о мужчине)
+    ipa: "/pʂɨˈstɔjnɨ/"
+    pos: adjective
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: brzydki
+    translation: некрасивый; уродливый
+    ipa: "/ˈbʐɨtki/"
+    pos: adjective
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: pracowita
+    translation: трудолюбивая
+    ipa: "/prat͡sɔˈvita/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: leniwa
+    translation: ленивая
+    ipa: "/lɛˈɲiva/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: stara
+    translation: старая
+    ipa: "/ˈstara/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: nowy
+    translation: новый
+    ipa: "/ˈnɔvɨ/"
+    pos: adjective
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: stary
+    translation: старый
+    ipa: "/ˈstarɨ/"
+    pos: adjective
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: duże
+    translation: большое; большие
+    ipa: "/ˈduʐɛ/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: niski
+    translation: низкий; невысокий
+    ipa: "/ˈɲiski/"
+    pos: adjective
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: wysoki
+    translation: высокий
+    ipa: "/vɨˈsɔki/"
+    pos: adjective
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: zdrowe
+    translation: здоровое; здоровые
+    ipa: "/ˈzdrɔvɛ/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: chore
+    translation: больное; больные
+    ipa: "/ˈxɔrɛ/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: brzydka
+    translation: некрасивая; уродливая
+    ipa: "/ˈbʐɨtka/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: ładna
+    translation: красивая; симпатичная
+    ipa: "/ˈwadna/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
+  - word: piękna
+    translation: красивая; прекрасная
+    ipa: "/ˈpjɛŋkna/"
+    pos: adjective_form
+    tags: [a1, adjective]
+    sources: [lesson_2026_10_20]
 ---
 
 # Adjectives
