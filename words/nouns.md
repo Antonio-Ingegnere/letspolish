@@ -300,7 +300,6 @@ entries:
     pos: noun_plural
     tags: [a1, noun, pronunciation]
     sources: [t2_1b]
-
   - word: tydzień
     translation: неделя
     ipa: "/ˈtɨd͡ʑɛɲ/"
@@ -309,7 +308,6 @@ entries:
     tags: [a1, noun, time]
     sources: [recent_conversation]
     example: "Za tydzień. — Через неделю."
-
   - word: mianownik
     translation: именительный падеж
     ipa: "/mjaˈnɔvɲik/"
@@ -318,7 +316,6 @@ entries:
     tags: [a1, noun, grammar]
     sources: [recent_conversation]
     nuance: "Грамматический термин; отвечает на вопросы kto? co? Связан со словом miano — имя, название."
-
   - word: kolor
     translation: цвет
     ipa: "/ˈkɔlɔr/"
@@ -327,6 +324,216 @@ entries:
     tags: [a1, noun, colors]
     sources: [recent_conversation]
     example: "Jakiego koloru jest truskawka? — Какого цвета клубника?"
+  - word: noblista
+    translation: лауреат Нобелевской премии
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: muzyk
+    translation: музыкант
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: astronom
+    translation: астроном
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: poeta
+    translation: поэт
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: aktor
+    translation: актёр
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: architekt
+    translation: архитектор
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: pisarz
+    translation: писатель
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: polityk
+    translation: политик
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: dyplomata
+    translation: дипломат
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: kompozytor
+    translation: композитор
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: pianista
+    translation: пианист
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: malarz
+    translation: художник; маляр
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: piosenkarz
+    translation: певец
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: prawnik
+    translation: юрист
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: chirurg
+    translation: хирург
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: podróżnik
+    translation: путешественник
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: papież
+    translation: папа римский
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: lekarz
+    translation: врач
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: żołnierz
+    translation: солдат
+    pos: noun
+    gender: m
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: noblistka
+    translation: лауреатка Нобелевской премии
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: ekonomistka
+    translation: экономистка
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: pisarka
+    translation: писательница
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: lekarka
+    translation: врач (женщина)
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: aktorka
+    translation: актриса
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: odkrywczyni
+    translation: первооткрывательница; исследовательница
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: wykładowczyni
+    translation: преподавательница; лектор
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: mistrzyni olimpijska
+    translation: олимпийская чемпионка
+    pos: noun_phrase
+    gender: f
+    tags: [a1, noun, profession, sport]
+    sources: [workbook_p85]
+  - word: malarka
+    translation: художница
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: artystka
+    translation: артистка; художница
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: okulistka
+    translation: офтальмолог (женщина)
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: himalaistka
+    translation: альпинистка; гималаистка
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: poetka
+    translation: поэтесса
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: pianistka
+    translation: пианистка
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: piosenkarka
+    translation: певица
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
+  - word: dziennikarka
+    translation: журналистка
+    pos: noun
+    gender: f
+    tags: [a1, noun, profession]
+    sources: [workbook_p85]
 ---
 
 # Nouns
