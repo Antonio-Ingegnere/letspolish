@@ -2,7 +2,7 @@
 entries:
   - word: przygnębiający
     translation: угнетающий; подавляющий; удручающий
-    ipa: "/pʂɨɡɲɛmˈbjajɔnt͡sɨ/"
+    ipa: "/pʂɨɡɲɛmbjaˈjɔnt͡sɨ/"
     pos: adjective
     tags: [a1, adjective, recent]
     sources: [conversation_2026_10_27]
