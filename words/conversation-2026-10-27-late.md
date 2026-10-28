@@ -102,6 +102,14 @@ entries:
     sources: [conversation_2026_10_27]
     nuance: "Narzędnik: dziewczyną."
     example: "Ona jest wesołą i piękną dziewczyną. — Она весёлая и красивая девушка."
+
+  - word: spacerować
+    translation: гулять; прогуливаться
+    ipa: "/spat͡sɛˈrɔvat͡ɕ/"
+    pos: verb
+    tags: [a1, verb, activity, recent]
+    sources: [conversation_2026_10_28]
+    example: "Lubię spacerować po parku. — Я люблю гулять по парку."
 ---
 
 # Recent conversation vocabulary — late 2026-10-27
