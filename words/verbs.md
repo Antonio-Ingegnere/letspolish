@@ -143,6 +143,36 @@ entries:
       wy: gracie
       oni_one: grają
 
+  - word: jeść
+    translation: есть; принимать пищу
+    pos: verb
+    tags: [a1, core, verb, present, irregular]
+    sources: [chat_2026_11_23]
+    nuance: "Настоящее время: jem, jesz, je, jemy, jecie, jedzą."
+    example: "Lubię jeść kaszę. — Я люблю есть кашу."
+    present:
+      ja: jem
+      ty: jesz
+      on_ona_ono: je
+      my: jemy
+      wy: jecie
+      oni_one: jedzą
+
+  - word: woleć
+    translation: предпочитать
+    pos: verb
+    tags: [a1, core, verb, present]
+    sources: [chat_2026_11_23]
+    nuance: "Настоящее время: wolę, wolisz, woli, wolimy, wolicie, wolą."
+    example: "Wolę kawę. — Я предпочитаю кофе."
+    present:
+      ja: wolę
+      ty: wolisz
+      on_ona_ono: woli
+      my: wolimy
+      wy: wolicie
+      oni_one: wolą
+
   - word: drżeć
     translation: дрожать
     ipa: "/dʐɛt͡ɕ/"
